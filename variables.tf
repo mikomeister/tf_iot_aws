@@ -1,6 +1,4 @@
 variable "region" {}
-
-variable "name_prefix" {
-  default = "oleksandr_rudenko"
-}
+variable "name_prefix" {}
+variable "account_id" {}
 
