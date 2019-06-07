@@ -1,5 +1,5 @@
 resource "aws_iam_role" "IoTLambdaRole" {
-  name = "iot_cloudwatchMetric_role"
+  name = "iot_lambda_role"
   description = "IAM role for Lambda"
   assume_role_policy = <<EOF
 {
