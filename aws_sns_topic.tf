@@ -8,7 +8,7 @@ resource "aws_sns_sms_preferences" "SunshadesSmsPreferences" {
 
 resource "aws_sns_topic_subscription" "SunshadesSmsSubscription" {
   endpoint = "380955392871"
-  protocol = "SMS"
+  protocol = "sms"
   topic_arn = "${aws_sns_topic.Sunshades.arn}"
 }
 

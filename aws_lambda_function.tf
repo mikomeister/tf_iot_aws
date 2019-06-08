@@ -1,9 +1,9 @@
 resource "aws_lambda_function" "LambdaSendResponse" {
   function_name = "LambdaSendResponse"
   handler = "LambdaSendResponse.lambda_handler"
-  role = "${aws_iam_role.IoTLambdaRole.name}"
+  role = "${aws_iam_role.IoTLambdaRole.arn}"
   runtime = "python2.7"
-  filename = "./lambda_code/LambdaSendResponse.py"
+  filename = "./lambda_code/LambdaSendResponse.zip"
 }
 
 resource "aws_lambda_permission" "LambdaSns" {

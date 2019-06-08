@@ -1,3 +1,5 @@
 .idea
 .terraform
 csr/
+*.pem.crt
+

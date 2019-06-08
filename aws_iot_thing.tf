@@ -1,5 +1,5 @@
-resource "aws_iot_thing" "example_thing" {
-  name = "example_thing"
+resource "aws_iot_thing" "thing_0" {
+  name = "thing_1"
   attributes = {
     First = "examplevalue"
   }
