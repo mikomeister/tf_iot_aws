@@ -11,7 +11,7 @@ resource "aws_iot_policy" "PubSub" {
          "iot:Connect"
        ],
        "Resource": [
-         "arn:aws:iot:${var.region}:${var.account_id}:client/${aws_iot_thing.thing_0.id}"
+         "arn:aws:iot:${var.region}:${var.account_id}:client/${aws_iot_thing.thing_example.id}"
        ]
      },
      {
@@ -20,7 +20,7 @@ resource "aws_iot_policy" "PubSub" {
           "iot:Publish"
         ],
         "Resource": [
-          "arn:aws:iot:${var.region}:${var.account_id}:topic/Greenhouse/${aws_iot_thing.thing_0.id}"
+          "arn:aws:iot:${var.region}:${var.account_id}:topic/Greenhouse/${aws_iot_thing.thing_example.id}"
       ]
     }
   ]

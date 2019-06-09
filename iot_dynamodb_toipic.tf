@@ -6,7 +6,7 @@ resource "aws_iot_topic_rule" "DynamoDbRule" {
 
   dynamodb {
     hash_key_field = "item"
-    hash_key_value = "${aws_iot_thing.thing_0.name}"
+    hash_key_value = "${aws_iot_thing.thing_example.name}"
     range_key_field = "timestamp"
     range_key_value = "${timestamp()}"
     role_arn = "${aws_iam_role.IoTDynamoDbRole.arn}"

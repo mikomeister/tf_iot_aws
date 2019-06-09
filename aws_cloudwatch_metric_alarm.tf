@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_metric_alarm" "TriggerSunShadeOpen" {
-  alarm_name = "Trigger_SunShade_Open"
+  alarm_name = "Trigger_SunShade_Will_be_CLose"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods = 3
   metric_name = "ShadePosition"
@@ -11,8 +11,9 @@ resource "aws_cloudwatch_metric_alarm" "TriggerSunShadeOpen" {
   alarm_actions = ["${aws_sns_topic.Sunshades.arn}"]
 }
 
+
 resource "aws_cloudwatch_metric_alarm" "Trigger_SunShade_Close" {
-  alarm_name = "Trigger_SunShade_Close"
+  alarm_name = "Trigger_SunShade_Will_be_Open"
   comparison_operator = "LessThanOrEqualToThreshold"
   evaluation_periods = 3
   metric_name = "ShadePosition"
