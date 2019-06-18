@@ -13,7 +13,7 @@ resource "aws_sns_topic_subscription" "SunshadesSmsSubscription" {
 }
 
 resource "aws_sns_topic_subscription" "SunshadesLambsaSubscription" {
-  endpoint = "${aws_lambda_function.LambdaSendResponse.arn}"
+  endpoint = "${aws_lambda_function.LambdaSendResponse1.arn}"
   protocol = "lambda"
   topic_arn = "${aws_sns_topic.Sunshades.arn}"
 }
